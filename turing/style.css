@@ -1,0 +1,121 @@
+/* Definindo a fonte com estilo militar */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Special+Elite&display=swap');
+
+/* Estilo do corpo da página */
+body {
+    font-family: 'Special Elite', cursive; /* Fonte com estilo manuscrito e "militar" */
+    background-color: #343a40;
+}
+
+/* Header com imagem de fundo de guerra e borda arredondada */
+header {
+    background-image: url('bg-war-texture.jpg'); /* Imagem de guerra */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+}
+
+/* Tipografia de títulos */
+h1, h2, h3 {
+    font-family: 'Bangers', cursive; /* Fonte mais agressiva e impactante */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #f5f5f5;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); /* Sombra para dar profundidade */
+}
+
+/* Títulos principais */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Efeito de "bala" nas seções */
+section, footer {
+    border-radius: 50px;
+}
+
+section.bg-dark {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #007bff;
+    padding: 30px;
+}
+
+/* Botões arredondados e com animações */
+#startGame {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bounceIn;
+    background-color: #ffc107;
+    border-color: #ffca2c;
+    font-weight: bold;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 50px; /* Deixa o botão com borda arredondada */
+    font-family: 'Bangers', cursive; /* Mantém o estilo "militar" no botão */
+}
+
+#startGame:hover {
+    background-color: #ffb300;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+#startGame:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+/* Tipografia para o texto de introdução */
+h2, p, ul {
+    font-family: 'Special Elite', cursive;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+/* Efeito de sombra nos textos */
+.text-shadow {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Efeito de animação para os botões */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Rodapé */
+footer.bg-war {
+    background-color: #1f2d3d;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+    }
+}
