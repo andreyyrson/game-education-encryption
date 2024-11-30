@@ -33,6 +33,31 @@
             <h4 class="text-white" id="resultMessage">Mensagem Decifrada:</h4>
             <p class="lead" id="decryptedMessage"></p>
         </div>
+
+        <div class="form-group text-center mt-4">
+            <label for="secretCode" class="text-white">Insira a Palavra Secreta:</label>
+            <input type="text" id="secretCode" class="form-control w-50 mx-auto">
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn verify-button" id="checkCodeButton">Verificar Código</button>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="lead text-white" id="successMessage" style="display: none;">Código correto! Redirecionando...</p>
+            <div id="loading" style="display: none;">
+                <img src="imagens/loading.gif" alt="Loading" width="50">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de ajuda -->
+    <button id="helpButton" class="help-button">?</button>
+
+    <!-- Contêiner da dica -->
+    <div id="tipContainer" class="tip-container">
+        <img src="imagens/turingDica.jpg" alt="Dica de Alan Turing" class="tip-image">
+        <div class="tip-bubble">A Cifra de César é um método simples de criptografia por substituição, no qual cada letra do texto original é deslocada um número fixo de posições no alfabeto. Por exemplo, com um deslocamento de 3, "A" vira "D", "B" vira "E" e assim por diante.</div>
     </div>
 
     <!-- Bootstrap JS -->

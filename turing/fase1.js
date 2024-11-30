@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const decryptButton = document.getElementById("decryptButton");
     const cipherText = document.getElementById("cipherText").value;
     const shiftValueInput = document.getElementById("shiftValue");
@@ -31,5 +30,36 @@ document.addEventListener("DOMContentLoaded", function () {
         const shiftValue = parseInt(shiftValueInput.value);
         const decryptedText = caesarCipherDecrypt(cipherText, shiftValue);
         decryptedMessage.textContent = decryptedText;
+    });
+
+    // Função para mostrar e esconder a dica
+    const helpButton = document.getElementById("helpButton");
+    const tipContainer = document.getElementById("tipContainer");
+
+    helpButton.addEventListener("click", function () {
+        if (tipContainer.style.display === "none" || tipContainer.style.display === "") {
+            tipContainer.style.display = "flex";
+        } else {
+            tipContainer.style.display = "none";
+        }
+    });
+
+    // Verificar a palavra secreta
+    const checkCodeButton = document.getElementById("checkCodeButton");
+    const secretCodeInput = document.getElementById("secretCode");
+    const successMessage = document.getElementById("successMessage");
+    const loading = document.getElementById("loading");
+
+    checkCodeButton.addEventListener("click", function () {
+        const secretCode = secretCodeInput.value.toUpperCase();
+        if (secretCode === "THERE IS A SECRET CODE!") {
+            successMessage.style.display = "block";
+            loading.style.display = "block";
+            setTimeout(() => {
+                window.location.href = "fase2.html";
+            }, 2000);
+        } else {
+            alert("Código incorreto. Tente novamente.");
+        }
     });
 });

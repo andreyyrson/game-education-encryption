@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Após 2 segundos, redireciona para a primeira fase
         setTimeout(function () {
             window.location.href = "fase1.html"; // Redirecionamento para a fase 1
-        }, 2000);
+        }, 5000);
     });
 
     // Animar o título principal
