@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const startButton = document.getElementById("startGame");
 
-    // Função para redirecionar para a primeira fase do jogo
+    // Função para redirecionar para a introdução
     startButton.addEventListener("click", function () {
-        startButton.disabled = true;
-        startButton.textContent = "Preparando sua missão...";
-
-        // Após 2 segundos, redireciona para a primeira fase
-        setTimeout(function () {
-            window.location.href = "fase1.html"; // Redirecionamento para a fase 1
-        }, 5000);
+        const userName = prompt("Por favor, insira seu nome:");
+        if (userName) {
+            localStorage.setItem('userName', userName);
+            window.location.href = "introducao.html";
+        }
     });
 
     // Animar o título principal
