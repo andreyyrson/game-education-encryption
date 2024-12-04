@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Ruim</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .final-ruim-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            background-image: url('imagens/derrota.jpg'); /* Adicione o caminho da sua imagem de fundo aqui */
+            background-size: cover;
+            background-position: center;
+            color: red;
+            font-family: 'Special Elite', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .final-ruim-message {
+            font-size: 5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /* Sombra mais pronunciada */
+        }
+    </style>
+</head>
+<body class="final-ruim-body" onclick="window.location.href='index.html'">
+    <audio id="backgroundAudio" src="audio/background.m4a" loop autoplay></audio>
+    <div class="final-ruim-message">
+        Você destruiu a humanidade
+    </div>
+</body>
+</html>

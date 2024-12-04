@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fase 2 - Cifra de Substituição Simples</title>
+    <title>Fase 2 - Cifra de César</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="fase2.css"> 
@@ -11,31 +11,25 @@
 <body class="bg-dark text-light">
     <audio id="backgroundAudio" src="audio/background.m4a" loop autoplay></audio>
     <div class="container py-5">
-        <h2 class="text-center text-white">Fase 2 - Cifra de Substituição Simples</h2>
+        <h2 class="text-center text-white">Fase 2 - Cifra de César</h2>
         <p class="lead text-center text-white">
-            Alan Turing lhe forneceu uma mensagem criptografada usando uma Cifra de Substituição Simples. Seu objetivo é decifrá-la e inserir a resposta correta para avançar.
+            Alan Turing criptografou mais uma mensagem, desta vez utilizando a famosa Cifra de César. Seu objetivo é decifrá-la e avançar para a próxima etapa.
         </p>
 
- 
         <div class="form-group text-center mt-4">
             <label for="cipherText" class="text-white">Mensagem Criptografada:</label>
-            <input type="text" id="cipherText" class="form-control w-50 mx-auto" value="Sdbvdqgx" readonly>
+            <input type="text" id="cipherText" class="form-control w-50 mx-auto" value="Lngwfqyfw" readonly>
         </div>
 
- 
         <div class="text-center mt-4">
             <p class="lead text-white">
-                Para decifrar esta mensagem, você precisa reverter a substituição de cada letra. 
-                A chave de substituição fixa mapeia as letras da seguinte maneira:
+                A Cifra de César desloca cada letra do alfabeto em uma quantidade fixa. Nesta fase, o deslocamento foi de <strong>5 letras</strong>. 
             </p>
             <p class="text-white">
-                A → D, B → E, C → F, D → G, E → H, F → I, G → J, H → K, I → L, J → M, K → N, L → O,
-                M → P, N → Q, O → R, P → S, Q → T, R → U, S → V, T → W, U → X, V → Y, W → Z, X → A, 
-                Y → B, Z → C
+                Para decifrar, você precisa <strong>reverter</strong> o deslocamento, ou seja, subtrair 5 posições para cada letra. Espaços e caracteres especiais não são alterados.
+                <p>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
             </p>
-            <p class="text-white">
-                Agora, aplique o processo inverso para descobrir a mensagem original.
-            </p>
+        </p>
         </div>
 
         <div class="form-group text-center mt-4">
@@ -43,7 +37,6 @@
             <input type="text" id="userAnswer" class="form-control w-50 mx-auto" placeholder="Digite a mensagem decifrada">
         </div>
 
-    
         <div class="text-center mt-4">
             <button class="btn btn-primary" id="verifyAnswerButton">Verificar Resposta</button>
         </div>
@@ -51,22 +44,18 @@
         <div class="text-center mt-4">
             <p class="lead text-white" id="successMessage" style="display: none;">Resposta correta! Redirecionando...</p>
             <div id="loading" style="display: none;">
-                <img src="imagens/loading.gif" alt="Loading" width="50">
             </div>
         </div>
     </div>
 
     <button id="helpButton" class="help-button">?</button>
 
-
     <div id="tipContainer" class="tip-container">
-        <img src="imagens/turingDica.jpg" alt="Dica de Alan Turing" class="tip-image">
+        <img src="Turing.webp" alt="Dica de Alan Turing" class="tip-image">
         <div class="tip-bubble">
-            A Cifra de Substituição Simples substitui cada letra da mensagem por outra letra fixada em uma tabela de mapeamento.
-            <br><br>
-           
+            A Cifra de César é simples: cada letra é substituída pela que aparece n posições adiante no alfabeto. Para decifrar, reverta o deslocamento.
+        </div>
     </div>
-
 
     <script src="fase2.js"></script>
 </body>
