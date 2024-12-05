@@ -134,8 +134,13 @@ footer.bg-war {
 }
 
 .full-screen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo escuro semi-transparente */
+    z-index: 1000; /* Coloca a imagem sobre o conteúdo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +150,7 @@ footer.bg-war {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .speech-bubbles {
